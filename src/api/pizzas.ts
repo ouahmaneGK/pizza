@@ -3,11 +3,21 @@ import { PizzaModel } from "../database";
 
 export const router = Router();
 
+
+router.get("/", (req, resp) => {
+  resp.send("Hello Pizzas miammmm !")
+})
+
+
+
+
+// Get all
 router.get("/pizzas", async (req, res) => {
   const pizzas = await PizzaModel.query();
   res.json(pizzas);
 });
 
+// insert pizza
 router.post("/pizzas", async (req, res) => {
   const { name, price } = req.body;
   const pizza = await PizzaModel.query()
