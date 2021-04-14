@@ -1,5 +1,5 @@
 import express from "express";
-import "./env";
+
 import { router } from "./api";
 
 const app = express();
