@@ -1,4 +1,4 @@
-
+import path from "path";
 
 export default {
   client: "pg",
@@ -10,7 +10,7 @@ export default {
         : false,
   },
   migrations: {
-    directory: "migrations",
+    directory: path.join(__dirname,"migrations" ),
     tableName: "migrations",
   },
 };
