@@ -10,19 +10,7 @@ describe('api/', () => {
    afterAll(async () => {
       await database.destroy();
    });
-   
-   describe('Get/ get all of pizzas', () => {
-   
-      it('should return a list of pizza', async () => {
-          
-         const request = supertest(express().use(router))
-         const results = await request.get("/pizzas");
-         expect(results.body.length).toBeGreaterThan(1);
-         
-      })
-   
-   })
-   
+
    describe('Post/ insert pizza', () => {
       
      
@@ -44,6 +32,20 @@ describe('api/', () => {
    
    
    })
+   
+   describe('Get/ get all of pizzas', () => {
+   
+      it('should return a list of pizza', async () => {
+          
+         const request = supertest(express().use(router))
+         const results = await request.get("/pizzas");
+         expect(results.body.length).toBeGreaterThan(1);
+         
+      })
+   
+   })
+   
+   
  }
 )
 
