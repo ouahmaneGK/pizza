@@ -11,7 +11,7 @@ describe('api/pizzas', () => {
       await database.destroy();
    });
 
-   //describe('Post/ insert pizza', () => {
+   //describe('Post/ insert pizza', () => { // sommme change for test
       it('should create a new pizza', async () => {
           
          const request = supertest(express().use(express.json()).use(router))
